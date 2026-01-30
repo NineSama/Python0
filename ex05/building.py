@@ -2,6 +2,14 @@ import sys
 import string
 
 def parse() -> str:
+    """
+    Objective:
+        Parse the command-line args or prompt the user for the text input
+    Returns:
+        str: returns the text to be analyzed
+    Raises:
+        AssertionError: if args are wrong, or if input is interrupted
+    """
     args = sys.argv
 
     if len(args) == 1 or (len(args) == 2 and args[1] == ""):
@@ -20,6 +28,12 @@ def parse() -> str:
     return text
 
 def count(text: str) -> None:
+    """
+    Objective:
+        Counts and prints character types from the text.
+    Args:
+        str: text to be analyzed
+    """
     upper = lower = digit = space = punc = 0
 
     for char in text:
@@ -43,6 +57,13 @@ def count(text: str) -> None:
 
 
 def main() -> int:
+    """
+    Objective:
+        Main entry for the program
+        Handle errors, input text and prints errors
+    Returns:
+        int: exit code status
+    """
     try:
         text = parse()
     except AssertionError as e:
