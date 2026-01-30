@@ -1,6 +1,7 @@
 import sys
 import string
 
+
 def parse() -> str:
     """
     Objective:
@@ -26,6 +27,7 @@ def parse() -> str:
     else:
         raise AssertionError("more than one argument is provided")
     return text
+
 
 def count(text: str) -> None:
     """
@@ -71,6 +73,7 @@ def main() -> int:
         return 1
     count(text)
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
