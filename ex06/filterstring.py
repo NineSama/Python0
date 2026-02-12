@@ -9,7 +9,7 @@ def parse() -> tuple[str, int]:
     Returns:
         tuple[str, int]: returns the string to be analyzed and the integer
     Raises:
-        AssertionError: if args are wrong
+        AssertionError: if arguments are wrong
     """
     args = sys.argv
 
